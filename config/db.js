@@ -6,6 +6,7 @@ const connectDB = async () => {
     console.log(
       `Conneted To Mongodb Databse ${conn.connection.host}`.bgMagenta.white
     );
+    mongoose.set('strictQuery',false)
   } catch (error) {
     console.log(`Errro in Mongodb ${error}`.bgRed.white);
   }
