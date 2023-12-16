@@ -26,9 +26,9 @@ app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, './client/build')))
 
 //routes
-app.use("https://clean-sunglasses-toad.cyclic.app/api/v1/auth", authRoutes);
-app.use("https://clean-sunglasses-toad.cyclic.app/api/v1/category", categoryRoutes);
-app.use("https://clean-sunglasses-toad.cyclic.app/api/v1/product", productRoutes);
+app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/category", categoryRoutes);
+app.use("/api/v1/product", productRoutes);
 
 //rest api
 app.use("*", function (req, res) {
